@@ -1,6 +1,7 @@
 import React from "react";
 import './Headernew.css';
 import logo from './assets/sucheeimage2.jpeg';
+import myPDF from './assets/CVsuchee.pdf';
 
 const Header = () => {
     return (
@@ -22,7 +23,8 @@ const Header = () => {
                         <p className="description">Welcome to my Portfolio</p>
                         <p className="active-buttons">
                         <button className="hirebutton">Hire me</button>
-                        <button className="cvbutton">Download CV</button></p>
+                        <a href="CVsuchee.pdf" download>
+                        <button className="cvbutton">Download CV</button></a></p>
                     </div>
                     <div className="Image"><img src={logo}></img>
                     </div>

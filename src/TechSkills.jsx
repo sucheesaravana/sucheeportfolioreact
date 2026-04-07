@@ -21,7 +21,7 @@ const TechSkills = () => {
     return () => clearTimeout(timer);
   }, []);
 return (
-    <section className="skills-section">
+    <section id="skills">
       <h2 className="subtitle11">TECHNICAL SKILLS</h2>
         <div className="technical">
            {skillsData.map((skill, index) => (

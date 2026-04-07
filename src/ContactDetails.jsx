@@ -7,7 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const ContactDetails =()=>{
     return (
-        <section className="contact-section">
+        <section id="contact">
             <h2>Contact Me</h2>
             <p className="subtitle">
              Please fill out the form below to discuss any work opportunities

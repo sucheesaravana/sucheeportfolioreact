@@ -112,11 +112,11 @@ nav{
 }
 .cvbutton{
     margin-top: 3%;
-    margin-left: 3%;
-    padding: 1%;
+    margin-left: 4%;
+    padding: 5% 3%;
     font-size: large;
     font-weight: 300;
-    background-color: coral;  
+    background-color: coral; 
 }
 .hirebutton:hover {
     color:white

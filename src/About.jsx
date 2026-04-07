@@ -4,7 +4,7 @@ import logo from './assets/sucheeimage1.jpeg';
 
 const About = () => {
   return (
-    <section className="about">
+    <section id="about">
         <div className="about-content">
             <div><img src={logo} /></div>
             
