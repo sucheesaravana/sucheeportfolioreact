@@ -31,7 +31,7 @@ nav{
     font-size: 40px;
     padding-bottom: 110px;
     color: black;
-    margin-left: -5%;
+    margin-left: 1%;
 }
 .header ul{
     display: flex;
@@ -72,7 +72,7 @@ nav{
     margin-left: 200px;
     gap: 30px;
 }
-.subtitle{
+.subtitle1{
     font-size: x-large;
     font-weight: 500;
     margin-top: 10%;

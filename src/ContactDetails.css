@@ -1,0 +1,61 @@
+.contact-section{
+    background-color:  rgb(48, 46, 46);
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+}
+.contact-section h2{
+    color: coral;
+}
+.subtitle{
+    margin-top: 1%;
+    color: white;
+    font-size: small;
+}
+.contact-form {
+    display: block;
+    margin:1%;
+}
+ul li{
+    display: block;
+    padding:20px;
+    
+}
+.velan ::placeholder{
+ color: black;
+}
+ul li input{
+    box-sizing: border-box;
+    background-color: coral;
+    color:black;
+    padding: 10px;
+    border-radius: 1%;
+}
+ul li textarea{
+    color: black;
+    background-color: coral;
+    width: 15%;
+}
+ul li button{
+    background-color: coral;
+    color: black;
+    padding: 10px;
+    border: none;
+}
+.footer{
+    color: coral;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-Content: center;
+    gap: 15px;
+    font-Size: 24px;
+    cursor: pointer;
+}
+.footer a{
+    color: coral;
+}
+.footer a:hover{
+    color: white;
+}
