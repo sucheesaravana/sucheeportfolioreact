@@ -197,3 +197,71 @@ nav{
   box-shadow: 0 8px 25px rgba(255, 127, 80, 0.5);
   color: coral;
 }
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade + slide from right */
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade up */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations */
+.content {
+  animation: slideLeft 1s ease forwards;
+}
+
+.Image img {
+  animation: slideRight 1.2s ease forwards;
+}
+
+/* Stagger text animation */
+.subtitle1 {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.title {
+  animation: fadeUp 1s ease forwards;
+}
+
+.description {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.active-buttons {
+  animation: fadeUp 1.4s ease forwards;
+}
+.subtitle1,
+.title,
+.description,
+.active-buttons,
+.content,
+.Image img {
+  opacity: 0;
+}
