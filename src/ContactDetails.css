@@ -1,4 +1,4 @@
-html {
+/* html {
   scroll-behavior: smooth;
 }
 #contact{
@@ -7,13 +7,15 @@ html {
     padding: 0%;
     margin: 0%;
 }
-.contact-section h2{
+.contact-section h1{
     color: coral;
+    font-size: larger;
 }
 .subtitle{
-    margin-top: 1%;
+    margin-top: 2%;
     color: white;
-    font-size: small;
+    font-size: large;
+    margin-left: 5%;
 }
 .contact-form {
     display: block;
@@ -26,6 +28,7 @@ ul li{
 }
 .velan ::placeholder{
  color: black;
+ font-size: large;
 }
 ul li input{
     box-sizing: border-box;
@@ -61,4 +64,140 @@ ul li button{
 }
 .footer a:hover{
     color: white;
+} */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Contact section */
+#contact {
+  background-color: rgb(48, 46, 46);
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInSection 1s ease forwards;
+}
+
+@keyframes fadeInSection {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section heading */
+.contact-section h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  
+}
+
+/* Subtitle */
+.subtitle {
+  margin-top: 10px;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 5%;
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+.contact-form {
+  display: block;
+  max-width: 500px;
+  margin: auto;
+}
+
+ul li {
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Input fields */
+.velan ::placeholder {
+  color: black;
+  font-size: 1rem;
+}
+
+ul li input,
+ul li textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: coral;
+  color: black;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li input:focus,
+ul li textarea:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px coral;
+}
+
+/* Textarea specific width adjustment */
+ul li textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Button */
+ul li button {
+  width: 100%;
+  background-color: coral;
+  color: black;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 127, 80, 0.5);
+}
+
+/* Footer icons */
+.footer {
+  color: coral;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.footer a {
+  color: coral;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Success message */
+.success {
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

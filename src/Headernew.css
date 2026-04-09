@@ -10,6 +10,12 @@ body{
     font-family: 'Times New Roman', Times, serif; 
     background-color: rgb(48, 46, 46);
   }
+html {
+  scroll-behavior: smooth;
+}
+#contact {
+  scroll-margin-top: 80px;
+}
 nav{
         background: coral;
    }
@@ -29,7 +35,7 @@ nav{
 
 .name{
     font-size: 40px;
-    padding-bottom: 110px;
+    padding-top: 1%;
     color: black;
     margin-left: 1%;
 }
@@ -100,40 +106,94 @@ nav{
 .active-buttons{
     display: flex;
     gap: 70px;
+    
 }
-.hirebutton{
-    margin-top: 3%;
+/* .hirebutton{
+    margin-top:3%;
     margin-left: 17%;
-    padding-right: 20px;
+    padding: 10px;
     font-size: large;
     font-weight: 300;
     background-color: coral;
-    padding: 1%;  
+    padding-top: 1%;  
+    color: black;
+    text-align: center;
+    border-radius: 20%;
+    text-decoration: none;
 }
+
 .cvbutton{
-    margin-top: 3%;
-    margin-left: 4%;
-    padding: 5% 3%;
+    margin-top: 4%;
+    margin-left: 17%;
+    padding: 10px;
     font-size: large;
     font-weight: 300;
     background-color: coral; 
+    border-radius: 20%;
 }
 .hirebutton:hover {
     color:white
 }
 .cvbutton:hover {
     color:white
-}
+} */
 .Image img{
     width: 350px;
     border-radius: 45%;
     margin-top: 50px;
     margin-left: 200px;
 }
+
 @media (max-width: 768px) {
   .section-container {
-    grid-template-columns: 1fr;
+    flex-direction: column-reverse;
     text-align: center;
   }
+
+  .Image img {
+    width: 250px;
+  }
+
+  .active-buttons a, .active-buttons button {
+    margin-bottom: 10px;
+  }
+}
+.active-buttons a, .active-buttons button {
+  
+  /* margin-right: 20px; */
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hire Me button */
+.hirebutton {
+  background-color: coral;
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 127, 80, 0.4);
+  padding: 5%;
+  margin-left: 20%;
+}
+
+.hirebutton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 127, 80, 0.6);
+  color: black;
+}
+
+/* Download CV button */
+.cvbutton {
+  background-color: white;
+  color: black;
+  box-shadow: 0 5px 15px rgba(255, 127, 80, 0.3);
+  padding: 15%;
+}
+
+.cvbutton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 127, 80, 0.5);
+  color: coral;
+}

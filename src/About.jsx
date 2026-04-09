@@ -11,10 +11,8 @@ const About = () => {
             <div>
             <h2 className="heading">About <span>Me</span></h2>
             <h1>I'm a <br /><span>Frontend Developer</span> & <span>Home Tutor</span></h1>
-            <p>I build responsive and user-friendly web interfaces using modern
-               technologies.</p>
-            <p>I am a dedicated and enthusiastic individual with a strong interest in both learning and teaching. Along with my academic pursuits, I conduct tuition classes for students in Mathematics, Physics and Computer Science (Grades 6–12).<br /><br /><br />
-                I am passionate about sharing knowledge and making learning an engaging and enjoyable experience.</p>
+            <p>I craft clean, responsive web experiences and love turning ideas into interactive interfaces.</p>
+            <p>Beyond coding, I teach Mathematics, Physics, and Computer Science to students (Grades 6–12), focusing on clarity and strong fundamentals.</p>
             </div>
         </div>
 
