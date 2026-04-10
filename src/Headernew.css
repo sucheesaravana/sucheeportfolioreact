@@ -18,6 +18,9 @@ html {
 }
 nav{
         background: coral;
+        position: sticky;
+        top: 0%;
+        z-index: 1000;
    }
 .header {
     width: 100%;
@@ -31,6 +34,7 @@ nav{
     background-color: coral;
     color:black;
     padding: 20px 50px;
+    
     }
 
 .name{
@@ -108,35 +112,7 @@ nav{
     gap: 70px;
     
 }
-/* .hirebutton{
-    margin-top:3%;
-    margin-left: 17%;
-    padding: 10px;
-    font-size: large;
-    font-weight: 300;
-    background-color: coral;
-    padding-top: 1%;  
-    color: black;
-    text-align: center;
-    border-radius: 20%;
-    text-decoration: none;
-}
 
-.cvbutton{
-    margin-top: 4%;
-    margin-left: 17%;
-    padding: 10px;
-    font-size: large;
-    font-weight: 300;
-    background-color: coral; 
-    border-radius: 20%;
-}
-.hirebutton:hover {
-    color:white
-}
-.cvbutton:hover {
-    color:white
-} */
 .Image img{
     width: 350px;
     border-radius: 45%;

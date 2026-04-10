@@ -1,7 +1,7 @@
 import React from "react";
 import './Headernew.css';
 import logo from './assets/sucheeimage2.jpeg';
-import myPDF from './assets/CVsuchee.pdf';
+import myPDF from './assets/SucheeupdateCV.pdf';
 import ContactDetails from "./ContactDetails";
 
 const Header = () => {
@@ -24,7 +24,7 @@ const Header = () => {
                         <p className="description">Welcome to my Portfolio</p>
                         <p className="active-buttons">
                         <a href="#contact" className="hirebutton">Hire Me</a>
-                        <a href="CVsuchee.pdf" download>
+                        <a href="SucheeupdateCV.pdf" download>
                         <button className="cvbutton" >Download CV</button></a></p>
                     </div>
 
