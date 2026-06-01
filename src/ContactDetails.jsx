@@ -1,90 +1,77 @@
-// import React from "react";
-// import './ContactDetails.css';
-// import { FaWhatsapp } from "react-icons/fa";
-// import { FaInstagram } from "react-icons/fa";
-// import { FaFacebook } from "react-icons/fa";
-// import { FaLinkedin } from "react-icons/fa";
-
-// const ContactDetails =()=>{
-//     return (
-//         <section id="contact">
-//             <h1>Contact Me</h1>
-//             <p className="subtitle">
-//              Please fill out the form below to discuss any work opportunities
-//             </p>
-
-//         <form className="contact-form">
-//           <ul className="velan">
-//             <li><input type="text" placeholder="Your Name" required /></li>
-//             <li><input type="email" placeholder="Your Email" required /></li>
-//             <li><textarea placeholder="Your Message" rows="5" required></textarea></li>
-//             <li><button type="submit">Submit</button></li>
-//           </ul>
-//         </form>
-
-        
-//       <p className="footer">
-//        <a href="https://web.whatsapp.com/"> <FaWhatsapp size={30} /></a>
-//        <a href="https://www.instagram.com/?hl=en"><FaInstagram size={30}/> </a>
-//        <a href="https://www.facebook.com/"><FaFacebook size={30}/></a>
-//        <a href="https://www.linkedin.com/uas/login"><FaLinkedin size={30}/></a>
-//       </p>
-//     </section>
-//   );
-// };
-    
-
-// export default ContactDetails;
-
-
-
 import React, { useState } from "react";
 import "./ContactDetails.css";
-import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaFacebook,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const ContactDetails = () => {
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
 
+  // Handle Input Change
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-    setSubmitted(true);
+  const phoneNumber = "917708647400";
 
-    setFormData({
-      name: "",
-      email: "",
-      message: ""
-    });
-  };
+  const text = `Hello Suchee,
+
+Name: ${formData.name}
+Email: ${formData.email}
+Message: ${formData.message}`;
+
+  const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(text)}`;
+
+  window.open(whatsappLink, "_blank");
+
+  setSubmitted(true);
+
+  setFormData({
+    name: "",
+    email: "",
+    message: "",
+  });
+};
 
   return (
     <section id="contact">
+
       <h1>Contact Me</h1>
 
       <p className="subtitle">
         Let’s connect and discuss opportunities
       </p>
 
+      {/* Success Message */}
       {submitted && (
-        <p className="success">Message sent successfully!</p>
+        <p className="success">
+          Message sent successfully!
+        </p>
       )}
 
+      {/* Contact Form */}
       <form className="contact-form" onSubmit={handleSubmit}>
+
         <ul className="velan">
+
+          {/* Name */}
           <li>
             <input
               type="text"
@@ -96,6 +83,7 @@ const ContactDetails = () => {
             />
           </li>
 
+          {/* Email */}
           <li>
             <input
               type="email"
@@ -107,6 +95,7 @@ const ContactDetails = () => {
             />
           </li>
 
+          {/* Message */}
           <li>
             <textarea
               name="message"
@@ -118,29 +107,58 @@ const ContactDetails = () => {
             ></textarea>
           </li>
 
+          {/* Submit Button */}
           <li>
-            <button type="submit">Send Message</button>
+            <button type="submit">
+              Send Message
+            </button>
           </li>
+
         </ul>
+
       </form>
 
+      {/* Social Icons */}
       <div className="footer">
-        <a href="https://web.whatsapp.com/" target="_blank" rel="noreferrer">
+
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/917708647400"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaWhatsapp size={30} />
         </a>
 
-        <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noreferrer">
+        {/* Instagram */}
+        <a
+          href="https://www.instagram.com/?hl=en"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaInstagram size={30} />
         </a>
 
-        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+        {/* Facebook */}
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaFacebook size={30} />
         </a>
 
-        <a href="https://www.linkedin.com/uas/login" target="_blank" rel="noreferrer">
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaLinkedin size={30} />
         </a>
+
       </div>
+
     </section>
   );
 };

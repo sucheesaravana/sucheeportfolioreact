@@ -6,6 +6,12 @@ const skillsData = [
   { name: "HTML", level: 80 },
   { name: "CSS", level: 85 },
   { name: "JavaScript", level: 75 },
+  { name: "React", level: 75 },
+  { name: "Python", level: 70 },
+  { name: "SQL", level: 80 },
+  { name: "Django", level: 70 },
+  { name: "BootStrap", level: 65 },
+  { name: "Tailwind", level: 70 },
 ];
 
 const TechSkills = () => {

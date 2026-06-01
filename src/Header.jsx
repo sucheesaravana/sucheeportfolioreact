@@ -13,6 +13,7 @@ const Header = () => {
                     <li><a href="#home">Home </a></li>
                     <li><a href="#about">About </a></li>
                     <li><a href="#skills">skills </a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact </a></li>
                 </ul>
             </div></nav>
@@ -24,12 +25,16 @@ const Header = () => {
                         <p className="description">Welcome to my Portfolio</p>
                         <p className="active-buttons">
                         <a href="#contact" className="hirebutton">Hire Me</a>
-                        <a href="/SucheeupdateCV.pdf" download>
+                        <a href="/Suchee-CV-May 2026.pdf" download>
                         <button className="cvbutton" >Download CV</button></a></p>
                     </div>
 
-                    <div className="Image"><img src={logo}></img>
-                    </div>
+                <div className="home-img">
+                    <div className="img-box">
+                        <div className="Image"><img src={logo}></img>
+                        </div>
+                     </div>   
+                </div>
                 </div>  
             </section>
         </>
