@@ -26,8 +26,8 @@ html {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 50px;
 }
 
 .project-card {
@@ -77,4 +77,41 @@ html {
   .project-card {
     padding: 25px;
   }
+}
+.view-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: coral;
+  font-size: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.view-project::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: coral;
+  transition: width 0.3s ease;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .view-project::after {
+  width: 100%;
+}
+
+.project-card:hover .arrow {
+  transform: translateX(8px);
+}
+
+.project-card:hover .view-project {
+  letter-spacing: 0.5px;
 }

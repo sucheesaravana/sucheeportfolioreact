@@ -1,6 +1,6 @@
 import React from "react";
 import "./Project.css";
-const project = [
+const projects = [
   {
     title: "Construction Website",
     description:
@@ -22,7 +22,7 @@ const project = [
   {
     title: "VTS Website",
     description:
-       "A Vehicle Tracking System (VTS) website designed to monitor and manage vehicle information efficiently. Features include vehicle details management, tracking information display, and a user-friendly dashboard for better fleet monitoring.",
+       "A responsive business website for Vetri Technology Solutions, showcasing IT services, software solutions, training programs, and company information through a modern and user-friendly design.",
     link: "https://project3vts-vg6m.vercel.app/solution",
   },
 ];
@@ -47,8 +47,8 @@ const Project = () => {
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <span className="view-project">
-                View Project →
-              </span>
+  View Project <span className="arrow">→</span>
+</span>
             </a>
           ))}
         </div>

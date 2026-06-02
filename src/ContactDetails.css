@@ -82,6 +82,10 @@ html {
   animation: fadeInSection 1s ease forwards;
 }
 
+#contact h1{
+  color: coral;
+}
+
 @keyframes fadeInSection {
   to {
     opacity: 1;
