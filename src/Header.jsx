@@ -130,7 +130,7 @@ const Header = () => {
 
             <div className="social-icons">
               <a
-                href="https://github.com/YOUR_USERNAME"
+                href="https://github.com/repos"
                 target="_blank"
                 rel="noreferrer"
               >
