@@ -6,10 +6,12 @@ import {
   FaInstagram,
   FaFacebook,
   FaLinkedin,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 
 const ContactDetails = () => {
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,53 +28,99 @@ const ContactDetails = () => {
     });
   };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+  // Handle Submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const phoneNumber = "917708647400";
+    const phoneNumber = "917708647400";
 
-  const text = `Hello Suchee,
+    const text = `Hello Suchee,
 
 Name: ${formData.name}
 Email: ${formData.email}
 Message: ${formData.message}`;
 
-  const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(text)}`;
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+      text
+    )}`;
 
-  window.open(whatsappLink, "_blank");
+    window.open(whatsappLink, "_blank");
 
-  setSubmitted(true);
+    setSubmitted(true);
 
-  setFormData({
-    name: "",
-    email: "",
-    message: "",
-  });
-};
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 4000);
+  };
 
   return (
-    <section id="contact">
+    <section id="contact" className="contact-section">
+      <div className="contact-container">
+        {/* Left Side */}
+        <div className="contact-left">
+          <h1>
+            Contact <span>Me</span>
+          </h1>
 
-      <h1>Contact Me</h1>
+          <p className="subtitle">
+            I'm always open to discussing new opportunities, freelance
+            projects, or collaborations. Feel free to reach out!
+          </p>
 
-      <p className="subtitle">
-        Let’s connect and discuss opportunities
-      </p>
+          <div className="contact-info">
+            <div className="info-box">
+              <FaEnvelope className="info-icon" />
+              <span>sucheeezhil@gmail.com</span>
+            </div>
 
-      {/* Success Message */}
-      {submitted && (
-        <p className="success">
-          Message sent successfully!
-        </p>
-      )}
+            <div className="info-box">
+              <FaPhoneAlt className="info-icon" />
+              <span>+91 7708647400</span>
+            </div>
 
-      {/* Contact Form */}
-      <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="info-box">
+              <FaMapMarkerAlt className="info-icon" />
+              <span>Tamil Nadu, India</span>
+            </div>
+          </div>
 
-        <ul className="velan">
+          <div className="footer">
+            <a
+              href="https://wa.me/917708647400"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaWhatsapp size={28} />
+            </a>
 
-          {/* Name */}
-          <li>
+            
+            {/* Replace with your profile */}
+            <a
+              href="https://www.linkedin.com/in/suchee-devi/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin size={28} />
+            </a>
+          </div>
+        </div>
+
+        {/* Right Side */}
+        <div className="contact-right">
+          {submitted && (
+            <p className="success">
+              ✅ Thanks for reaching out! Your message has been sent
+              successfully.
+            </p>
+          )}
+
+          <form className="contact-form" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
@@ -81,10 +129,7 @@ Message: ${formData.message}`;
               onChange={handleChange}
               required
             />
-          </li>
 
-          {/* Email */}
-          <li>
             <input
               type="email"
               name="email"
@@ -93,72 +138,20 @@ Message: ${formData.message}`;
               onChange={handleChange}
               required
             />
-          </li>
 
-          {/* Message */}
-          <li>
             <textarea
               name="message"
-              placeholder="Your Message"
-              rows="5"
+              rows="6"
+              placeholder="Write your message..."
               value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
-          </li>
 
-          {/* Submit Button */}
-          <li>
-            <button type="submit">
-              Send Message
-            </button>
-          </li>
-
-        </ul>
-
-      </form>
-
-      {/* Social Icons */}
-      <div className="footer">
-
-        {/* WhatsApp */}
-        <a
-          href="https://wa.me/917708647400"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaWhatsapp size={30} />
-        </a>
-
-        {/* Instagram */}
-        <a
-          href="https://www.instagram.com/?hl=en"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaInstagram size={30} />
-        </a>
-
-        {/* Facebook */}
-        <a
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaFacebook size={30} />
-        </a>
-
-        {/* LinkedIn */}
-        <a
-          href="https://www.linkedin.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaLinkedin size={30} />
-        </a>
-
+            <button type="submit"> Send Message</button>
+          </form>
+        </div>
       </div>
-
     </section>
   );
 };

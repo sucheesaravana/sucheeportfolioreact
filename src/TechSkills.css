@@ -1,132 +1,196 @@
-/* html {
-  scroll-behavior: smooth;
-}
-#skills {
-  background: rgb(48, 46, 46);
-  color: white;
-  width: 100%;
-  height: auto;
-  padding: 0%;
-  margin-bottom: 0%;
-  margin-top: 0%;
-  }
-
-.subtitle11 {
-  text-align: center;
-  color: coral;
-  letter-spacing : 2px;
-  padding-right: 80px;
-  margin-bottom: 50px;
+html{
+    scroll-behavior:smooth;
 }
 
-.technical {
-  max-width: 500px;
-  margin: auto;
+/* Section */
+
+#skills{
+
+    background:#1f1f1f;
+    color:white;
+    padding:80px 10%;
 }
 
-.skill {
-  margin-bottom: 20px;
+/* Heading */
+
+.subtitle11{
+
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+    font-weight:700;
 }
 
-.skill-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-  font-size: 14px;
+.subtitle11 span{
+
+    color:coral;
 }
 
-.progress-bar {
-  width: 100%;
-  height: 8px;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
+/* Grid */
+
+.technical{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
 }
 
-.progress-fill {
-  height: 100%;
-  background: coral;
-  border-radius: 10px;
-} */
+/* Card */
 
-html {
-  scroll-behavior: smooth;
+.skill{
+
+    background:#2b2b2b;
+    padding:22px;
+    border-radius:15px;
+    transition:.4s;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp .8s forwards;
 }
 
-/* Section styling */
-#skills {
-  background: rgb(48, 46, 46);
-  color: white;
-  width: 100%;
-  padding: 50px 0;
-}
+.skill:hover{
 
-/* Title */
-.subtitle11 {
-  text-align: center;
-  color: coral;
-  letter-spacing: 2px;
-  margin-bottom: 50px;
-}
-
-/* Skills container */
-.technical {
-  max-width: 500px;
-  margin: auto;
-}
-
-/* Each skill card */
-.skill {
-  margin-bottom: 20px;
-  opacity: 0; /* For fade-in animation */
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
-}
-
-/* Delay for sequential animation */
-.skill:nth-child(1) { animation-delay: 0.2s; }
-.skill:nth-child(2) { animation-delay: 0.4s; }
-.skill:nth-child(3) { animation-delay: 0.6s; }
-
-/* Fade-up keyframes */
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(255,127,80,.25);
 }
 
 /* Header */
-.skill-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-  font-size: 14px;
+
+.skill-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+    font-size:18px;
 }
 
-/* Progress bar background */
-.progress-bar {
-  width: 100%;
-  height: 8px;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
+.skill-title{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-/* Progress fill with smooth animation */
-.progress-fill {
-  height: 100%;
-  background: coral;
-  border-radius: 10px;
-  width: 0; /* initial width for animation */
-  transition: width 1.5s ease-in-out;
+/* Icon */
+
+.skill-icon{
+
+    color:coral;
+    font-size:24px;
 }
 
-/* Optional: glow effect */
-.progress-fill::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 8px rgba(255, 127, 80, 0.6);
+/* Progress */
+
+.progress-bar{
+
+    width:100%;
+    height:10px;
+    background:#555;
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.progress-fill{
+
+    height:100%;
+    background:linear-gradient(to right,coral,#ffb347);
+    border-radius:50px;
+    transition:width 2s ease;
+    position:relative;
+}
+
+.progress-fill::after{
+
+    content:"";
+    position:absolute;
+    right:0;
+    top:0;
+    width:12px;
+    height:100%;
+    background:white;
+    opacity:.6;
+}
+
+/* Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.skill:nth-child(1){animation-delay:.1s;}
+.skill:nth-child(2){animation-delay:.2s;}
+.skill:nth-child(3){animation-delay:.3s;}
+.skill:nth-child(4){animation-delay:.4s;}
+.skill:nth-child(5){animation-delay:.5s;}
+.skill:nth-child(6){animation-delay:.6s;}
+.skill:nth-child(7){animation-delay:.7s;}
+.skill:nth-child(8){animation-delay:.8s;}
+.skill:nth-child(9){animation-delay:.9s;}
+
+/* Tablet */
+
+@media(max-width:900px){
+
+.technical{
+
+grid-template-columns:1fr;
+}
+
+.subtitle11{
+
+font-size:34px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+#skills{
+
+padding:60px 20px;
+}
+
+.subtitle11{
+
+font-size:30px;
+margin-bottom:40px;
+}
+
+.skill{
+
+padding:18px;
+}
+
+.skill-header{
+
+font-size:16px;
+}
+
+.skill-icon{
+
+font-size:20px;
+}
+
+.progress-bar{
+
+height:8px;
+}
+
 }

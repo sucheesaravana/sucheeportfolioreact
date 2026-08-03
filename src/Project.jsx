@@ -1,5 +1,6 @@
 import React from "react";
 import "./Project.css";
+
 const projects = [
   {
     title: "Construction Website",
@@ -10,7 +11,7 @@ const projects = [
   {
     title: "Tasty Bites Website",
     description:
-       "A food ordering and restaurant website featuring delicious menu items, special offers, customer reviews, and online ordering functionality. Built with an attractive UI to enhance the user experience.",
+      "A food ordering and restaurant website featuring delicious menu items, special offers, customer reviews, and online ordering functionality. Built with an attractive UI to enhance the user experience.",
     link: "https://tastyfoodproject-c83d.vercel.app/write",
   },
   {
@@ -22,8 +23,24 @@ const projects = [
   {
     title: "VTS Website",
     description:
-       "A responsive business website for Vetri Technology Solutions, showcasing IT services, software solutions, training programs, and company information through a modern and user-friendly design.",
+      "A responsive business website for Vetri Technology Solutions, showcasing IT services, software solutions, training programs, and company information through a modern and user-friendly design.",
     link: "https://project3vts-vg6m.vercel.app/solution",
+  },
+
+  // New Project 1
+  {
+    title: "Pet Care & Adoption System",
+    description:
+      "A full-stack web application that enables users to browse pets, submit adoption requests, manage pet profiles, and access pet care information. Designed with a responsive interface and secure user authentication for a seamless adoption experience.",
+    link: "https://pet-3.onrender.com/",
+  },
+
+  // New Project 2
+  {
+    title: "Bakery Management System",
+    description:
+      "A Django-based bakery management system that allows customers to browse bakery products, place orders, make secure online payments using Razorpay, and track purchases. The application features an admin dashboard for product, order, and inventory management with a fully responsive design.",
+    link: "https://bakery-foro.onrender.com/",
   },
 ];
 
@@ -47,8 +64,8 @@ const Project = () => {
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <span className="view-project">
-  View Project <span className="arrow">→</span>
-</span>
+                View Project <span className="arrow">→</span>
+              </span>
             </a>
           ))}
         </div>
@@ -56,4 +73,5 @@ const Project = () => {
     </section>
   );
 };
+
 export default Project;

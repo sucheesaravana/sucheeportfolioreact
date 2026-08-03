@@ -1,4 +1,4 @@
-html {
+/* html {
   scroll-behavior: smooth;
 }
 
@@ -76,4 +76,247 @@ html {
 
 .about-list li::marker {
   color: coral;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*======================
+    ABOUT SECTION
+=======================*/
+.about {
+  background: #1f1f1f;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 10%;
+}
+
+.about-content {
+  max-width: 950px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*======================
+      HEADINGS
+=======================*/
+.heading {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.heading span {
+  color: coral;
+}
+
+.about h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.about h1 span {
+  color: coral;
+}
+
+.about h3 {
+  font-size: 24px;
+  color: coral;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/*======================
+      PARAGRAPH
+=======================*/
+.about p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #d9d9d9;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/*======================
+      LIST
+=======================*/
+.about-list {
+  margin-top: 35px;
+  list-style: none;
+  padding: 0;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #2b2b2b;
+  padding: 15px 20px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border-left: 4px solid coral;
+  font-size: 17px;
+  color: #f2f2f2;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.about-list li:hover {
+  transform: translateX(12px);
+  background: coral;
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 127, 80, 0.4);
+}
+
+.about-list li:hover .icon {
+  color: white;
+  transform: rotate(8deg) scale(1.2);
+}
+
+/*======================
+        ICONS
+=======================*/
+.icon {
+  color: coral;
+  font-size: 24px;
+  min-width: 28px;
+  transition: 0.3s ease;
+}
+
+/*======================
+      HIGHLIGHT
+=======================*/
+.about span {
+  color: coral;
+}
+
+/*======================
+      RESPONSIVE
+=======================*/
+@media (max-width: 992px) {
+
+  .about {
+    padding: 70px 8%;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+
+  .about h1 {
+    font-size: 34px;
+  }
+
+  .about h3 {
+    font-size: 21px;
+  }
+
+  .about p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .about {
+    padding: 60px 7%;
+    min-height: auto;
+  }
+
+  .heading {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .about h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .about h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .about p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .about-list li {
+    font-size: 15px;
+    padding: 14px 16px;
+    gap: 15px;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .about {
+    padding: 50px 20px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .about h1 {
+    font-size: 24px;
+  }
+
+  .about h3 {
+    font-size: 17px;
+  }
+
+  .about p {
+    font-size: 15px;
+  }
+
+  .about-list li {
+    font-size: 14px;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+/*======================
+      SCROLLBAR
+=======================*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: coral;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b3d;
 }
